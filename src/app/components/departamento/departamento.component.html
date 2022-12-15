@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col text-center mt-4 mb-5">
+        <h2>Listado de departamentos</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col ms-5 me-5">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>País</th>
+                    <th>Código-Depto</th>
+                    <th>Nombre</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let departamento of departamentos; let i = index">
+                    <td>{{i+1}}.</td>
+                    <td>{{departamento.Pais}}</td>
+                    <td>{{departamento.Depto}}</td>
+                    <td>{{departamento.NomDepto}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="d-flex justify-content-end">
+    <div class="me-5">
+        <button class="btn btn-danger" [routerLink]="['']">Regresar</button>
+    </div>
+</div>
